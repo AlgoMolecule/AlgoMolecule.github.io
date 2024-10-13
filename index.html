@@ -35,6 +35,15 @@
             margin: 0 auto;
             filter: drop-shadow(0 0 20px rgba(0, 255, 127, 0.5));
             /* Soft glow effect */
+            transition: all 0.3s ease-in-out;
+            /* Smooth transition on hover */
+        }
+
+        header img:hover {
+            filter: drop-shadow(0 0 40px rgba(0, 255, 127, 1));
+            /* Stronger glow on hover */
+            transform: scale(1.05);
+            /* Slightly increase size on hover */
         }
 
         nav {
@@ -157,15 +166,14 @@
         <section id="services">
             <h2>Our Services</h2>
             <ul>
+                <li>Quantum Chemistry Calculations of Molecular Spectra</li>
                 <li>Algorithm Development for Chemical Processes</li>
-                <li>Molecular Modeling and Optimization</li>
-                <li>Data-Driven Molecular Insights</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:AlgoMolecule@gmail.com" style="color: #1abc9c;">AlgoMolecule@gmail.com</a></p>
+            <p>Email: <a href="AlgoMolecule@gmail.com" style="color: #1abc9c;">AlgoMolecule@gmail.com</a></p>
         </section>
     </main>
 
