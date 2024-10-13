@@ -6,28 +6,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlgoMol LLC - Computational Chemistry and Molecular Sciences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #000;
+            color: #e0e0e0;
+            scroll-behavior: smooth;
         }
 
         header {
-            background-color: #2c3e50;
+            background-color: #0a0f24;
+            /* A cool, dark color to make the logo stand out */
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 4rem 0;
+            position: relative;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        header img {
+            width: 40%;
+            /* Makes the logo responsive */
+            max-width: 400px;
+            /* Limits the size on large screens */
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 127, 0.5));
+            /* Soft glow effect */
         }
 
         nav {
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         nav a {
@@ -35,29 +46,89 @@
             margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+        }
+
+        nav a:hover {
+            border-bottom: 2px solid white;
+            transition: 0.3s ease-in-out;
         }
 
         main {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 1rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            color: #1abc9c;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #1abc9c;
+            color: black;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        a.button:hover {
+            background-color: #16a085;
+            color: white;
         }
 
         footer {
             text-align: center;
-            padding: 1rem;
-            background-color: #2c3e50;
-            color: white;
+            padding: 1.5rem 0;
+            background-color: #1abc9c;
+            color: black;
             position: fixed;
             width: 100%;
             bottom: 0;
+            left: 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -65,7 +136,7 @@
 <body>
 
     <header>
-        <h1>AlgoMol LLC</h1>
+        <img src="fulllogo_transparent.png" alt="AlgoMol Logo">
         <nav>
             <a href="#about">About Us</a>
             <a href="#services">Services</a>
@@ -76,24 +147,25 @@
     <main>
         <section id="about">
             <h2>About Us</h2>
-            <p>Welcome to AlgoMol LLC, where we merge advanced computational algorithms with molecular sciences to solve
-                complex chemical engineering challenges. Our mission is to provide innovative solutions through
-                cutting-edge research and development in the fields of quantum mechanics, chemical modeling, and
-                computational chemistry.</p>
+            <p>At AlgoMol LLC, we blend the power of advanced computational algorithms and molecular sciences to unlock
+                new possibilities in chemical engineering and molecular research. Our focus is on leveraging quantum
+                mechanics, chemical modeling, and computational chemistry to solve complex challenges and drive
+                innovation forward.</p>
+            <a href="#contact" class="button">Get in Touch</a>
         </section>
 
         <section id="services">
             <h2>Our Services</h2>
             <ul>
-                <li>Molecular Modeling and Optimization</li>
                 <li>Algorithm Development for Chemical Processes</li>
-                <li>Data-Driven Insights in Molecular Sciences</li>
+                <li>Molecular Modeling and Optimization</li>
+                <li>Data-Driven Molecular Insights</li>
             </ul>
         </section>
 
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Email: AlgoMolecule@gmail.com</p>
+            <p>Email: <a href="mailto:AlgoMolecule@gmail.com" style="color: #1abc9c;">AlgoMolecule@gmail.com</a></p>
         </section>
     </main>
 
